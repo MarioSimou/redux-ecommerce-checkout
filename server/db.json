@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "guid": "c922bc95-a573-476f-9823-951cbc9b25ef",
+      "name": "product 1",
+      "price": 10.10 
+    },
+    {
+      "id": 2,
+      "guid": "c922bc95-a573-476f-9823-951cbc9b25ed",
+      "name": "product 2",
+      "price": 5.10
+    },
+    {
+      "id": 3,
+      "guid": "c922bc95-a573-476f-9823-951cbc9b25ee",
+      "name": "product 3",
+      "price": 2.1 
+    }
+  ]
+}
