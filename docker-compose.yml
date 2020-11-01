@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  ui:
+    container_name: ${PROJECT:-redux_ecommerce}_ui
+    image: ecommerce/ui:dev
+    build:
+      context: ui
+      dockerfile: ./deployments/ui.dev.dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - BASE_URL_SERVER=http://localhost:8081
+    volumes:
+      - type: bind
+        source: $PWD/ui
+        target: /app
+    stdin_open: true
+    # tty: true
+    restart: on-failure
+    depends_on:
+      - server
+
+  server:
+    container_name: ${PROJECT:-redux_ecommerce}_server
+    image: ecommerce/server:dev
+    build:
+      context: server
+      dockerfile: ./deployments/server.dev.dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - BASE_URL_UI=http://localhost:8080
+    volumes:
+      - type: bind
+        source: $PWD/server
+        target: /app
+    restart: on-failure

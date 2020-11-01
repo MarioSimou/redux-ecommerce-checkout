@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e .ts,.js,.json -x ts-node --project tsconfig.json ./src/server.ts"
+    "start": "nodemon -e .ts,.js,.json -x NODE_PATH=. ts-node ./src/server.ts"
   },
   "keywords": [],
   "author": "",
