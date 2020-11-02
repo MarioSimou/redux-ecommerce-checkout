@@ -5,6 +5,7 @@ export interface Product {
   guid: string
   name: string
   price: number
+  image: string
   currency: currencies
 } 
 
@@ -20,4 +21,5 @@ export interface User {
   guid: string
   username: string
   email: string
+  avatar: string
 }

@@ -8,7 +8,7 @@ const getUser = async(req: express.Request, res: express.Response) => {
   const params : { [key: string]: string; } = req.params
 
   const user: User = <User>db.users.find(user => user.guid === params.guid)
-  
+
   if(!user){
     return res.status(statusCodes.NotFound)
               .json(e.newHTTPResponseBody(statusCodes.NotFound, e.ErrNotFound))

@@ -1,7 +1,8 @@
 import React from 'react'
-import ProductCard from '../ProductCard/ProductCard'
+import ProductCard from '../ProductCard/ProductCard.container'
 import { ProductI } from '../../types/interface'
 import loader from '../../imgs/loader.gif'
+import styles from './ProductList.module.scss'
 
 export interface productsListProps {
   fetching: boolean
@@ -10,7 +11,7 @@ export interface productsListProps {
 
 const ProductsList = ({products, fetching} : productsListProps) => {
   return (
-    <div>
+    <div className={styles.list}>
       {fetching && <img src={loader} title="loader" alt="loader"/>}
       {!fetching && products.map((product: ProductI) => {
         return (

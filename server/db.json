@@ -5,21 +5,24 @@
       "guid": "c922bc95-a573-476f-9823-951cbc9b25ef",
       "name": "product 1",
       "price": 10.10,
-      "currency": "GBP"
+      "currency": "GBP",
+      "image": "https://img.freepik.com/free-vector/household-cleaning-products-accessories-collection-kitchen-house-cleaning-utensils-bottles-with-plastic-bucket-gloves-illustration_134830-271.jpg?size=626&ext=jpg"
     },
     {
       "id": 2,
       "guid": "c922bc95-a573-476f-9823-951cbc9b25ed",
       "name": "product 2",
       "price": 5.10,
-      "currency": "GBP"
+      "currency": "GBP",
+      "image": "https://www.foodbev.com/wp-content/uploads/2019/12/Coca-Cola.jpg"
     },
     {
       "id": 3,
       "guid": "c922bc95-a573-476f-9823-951cbc9b25ee",
       "name": "product 3",
       "price": 2.1 ,
-      "currency": "EUR"
+      "currency": "EUR",
+      "image": "https://api.time.com/wp-content/uploads/2018/11/sweetfoam-sustainable-product.jpg?quality=85"
     }
   ],
   "users": [
@@ -27,13 +30,15 @@
       "id": 1,
       "guid": "d922bc95-a573-476f-9823-951cbc9b25ef",
       "username": "foo",
-      "email": "foo@gmail.com"
+      "email": "foo@gmail.com",
+      "avatar": "https://www.w3schools.com/howto/img_avatar.png"
     },
     {
       "id": 2,
       "guid": "e922bc95-a573-476f-9823-951cbc9b25ef",
       "username": "bar",
-      "email": "bar@gmail.com"
+      "email": "bar@gmail.com",
+      "avatar": "https://www.w3schools.com/howto/img_avatar.png"
     }
   ]
 }

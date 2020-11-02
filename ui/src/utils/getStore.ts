@@ -6,6 +6,7 @@ import { stateSchema } from '../index'
 
 const getStore = (initialState: stateSchema): redux.Store => {
   const sagaMiddleware = createSagaMiddlewares()
+
   const store = createStore(reducers, initialState, applyMiddleware(sagaMiddleware))
 
   for(const saga of Object.values(sagas)){
