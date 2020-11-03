@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './App.module.scss'
-import { ProductI, CartProductI } from '../../types/interface';
+import { ProductI } from '../../types/interface';
 import ProductsList from '../ProductsList/ProductsList'
+import CartItem from '../CartItem/CartItem.container'
+import { cartStateProps } from '../../reducers/cart'
 
 export interface AppProps {
   products: Array<ProductI>
   fetchProducts: Function,
   fetchUser: Function,
   fetching: boolean
-  cart: Array<CartProductI>
+  cart: cartStateProps
 }
 
 const App = ({fetchProducts, fetchUser, products, fetching, cart}: AppProps) => {
@@ -24,12 +26,13 @@ const App = ({fetchProducts, fetchUser, products, fetching, cart}: AppProps) => 
         <ProductsList products={products} fetching={fetching}/>
       </div>
       <div className={styles.checkout}>
-        {cart.length === 0 && <h4>Empty Cart</h4>}
-        {cart.map((cartProduct) => {
+        {cart.items.length === 0 && <h4>Empty Cart</h4>}
+        {cart.items.map((cartProduct) => {
           return (
-            <div key={cartProduct.product.guid}>{cartProduct.product.name}</div>
+            <CartItem key={cartProduct.product.guid} item={cartProduct} />
           )
         })}
+        {cart.price > 0 && <div>Total: {cart.price.toFixed(2)}</div>}
       </div>
     </div>
   );

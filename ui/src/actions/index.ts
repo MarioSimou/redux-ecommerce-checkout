@@ -16,6 +16,7 @@ export {
 } from './user'
 
 export {
+  REMOVE_PRODUCT_FROM_CART,
   ADD_PRODUCT_TO_CART,
   RESET_CART,
 } from './cart'

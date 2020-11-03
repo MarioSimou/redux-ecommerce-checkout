@@ -18,7 +18,7 @@ export interface UserI {
   avatar: string
 }
 
-export interface CartProductI {
+export interface CartItemI {
   product: ProductI
   quantity: number
 }
